@@ -55,9 +55,9 @@ function Todo() {
                     <button onClick={handleClick}>Add</button>
                 </div>
 
-                {tasks.map(({ text, completed }, index) => {
+                {tasks.map(({ text, complete }, index) => {
                     return <div className='task'>
-                        <li className={completed ? "done" : ""} key={Math.random()} onClick={() => handleDone(index)}>
+                        <li className={complete ? "done" : ""} key={Math.random()} onClick={() => handleDone(index)}>
                             {text}
                         </li>
                         <span onClick={() => handleDel(index)}>X</span>
